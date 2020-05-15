@@ -1,4 +1,4 @@
-# Welcome, this is an practical example for Linked Data course at WUR
+# Welcome, this is a practical example for Linked Data course at WUR
 # Week -1
 
 @prefix bc:<https://bc-wur.github.io/Walter_White_example.n3#> .
