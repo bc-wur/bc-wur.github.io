@@ -1,0 +1,13 @@
+@prefix bc: <https://bcWUR.github.io/Walter_White_example#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbo: <https://www.example.org/#> .
+@prefix dbp: <https://www.example.org/#> .
+@prefix dbpp: <https://www.example.org/#> .
+@prefix ex: <https://www.example.org/#> .
+
+bc:Walter_White_(Breaking_Bad) dbo:series dbp:Breaking_Bad;
+                               dbo:spouse dbp:Skyler_White;
+                               dbpp:portrayer dbp:Brain_Cranston;
+                               
+                               
+                               
