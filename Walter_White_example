@@ -1,3 +1,9 @@
+<?xml version="1.0"?>
+
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:schema="http://schema.org/">
+
 @prefix bc: <https://bcWUR.github.io/Walter_White_example#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dbo: <https://www.example.org/#> .
@@ -9,5 +15,7 @@ bc:Walter_White_(Breaking_Bad) dbo:series dbp:Breaking_Bad;
                                dbo:spouse dbp:Skyler_White;
                                dbpp:portrayer dbp:Brain_Cranston;
                                
-                               
-                               
+
+
+
+</rdf:RDF>
