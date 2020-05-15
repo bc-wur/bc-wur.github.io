@@ -12,7 +12,7 @@ This is my practical exercise for Linked Data course at WUR, enjoy...
 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 xmlns:schema="http://schema.org/">
 
-@prefix bc: <https://bc-wur.github.io/Walter_White_example#> .
+@prefix bc: <https://www.bc-wur.github.io/Walter_White_example#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dbo: <https://www.example.org/#> .
