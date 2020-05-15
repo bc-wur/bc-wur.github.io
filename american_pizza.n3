@@ -1,6 +1,20 @@
 # Linked Data, WUR, 2020, Period-6
 # Week-1, Practical Class
 # American Pizza example
-# prefixes are ignored
+# Some @prefix statements are ignored
+
+@prefix bc: <https://bc-wur.github.io/american_pizza.n3#> .
+@prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 
+bc:American bc:hasCountryOfOrigin bc:America ;
+            bc:hasTopping bc:MozzarellaTopping ,        # not sure if using comma is true for OR statements
+                             PeperoniSausageTopping ,
+                             TomatoTopping ;
+            skos:altLabel "American Pizza"@en ;
+            rdfs:label "American"@en ;
+            rdfs:label "Americana"@pt ;
+            skos:prefLabel "American"@en ;
+            rdfs:subClassOf NamedPizza ;
+            rdf:type rdfs:Class ;
