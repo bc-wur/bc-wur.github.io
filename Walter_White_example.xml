@@ -8,6 +8,8 @@ This is my practical exercise for Linked Data course at WUR, enjoy...
 
 <!-- Week-1, Practical -->
 
+<note>
+
 <rdf:RDF
 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 xmlns:schema="http://schema.org/">
@@ -37,3 +39,5 @@ _:2 ex:affiliationPlace ex:J._P._Wynne_High_School ;
     rdf:type ex:Teacher .
 
 </rdf:RDF>
+
+</note>  
