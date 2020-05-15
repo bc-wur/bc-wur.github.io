@@ -9,9 +9,9 @@
 
 
 bc:American bc:hasCountryOfOrigin bc:America ;
-            bc:hasTopping bc:MozzarellaTopping ,        # not sure if using comma is true for OR statements
-                             PeperoniSausageTopping ,
-                             TomatoTopping ;
+            #temp bc:hasTopping bc:MozzarellaTopping ,        # not sure if using comma is true for OR statements
+                             #temp PeperoniSausageTopping ,
+                             #temp TomatoTopping ;
             skos:altLabel "American Pizza"@en ;
             rdfs:label "American"@en ;
             rdfs:label "Americana"@pt ;
