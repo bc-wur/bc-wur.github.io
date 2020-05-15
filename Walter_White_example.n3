@@ -1,4 +1,5 @@
-<!-- Welcome, this is an example for Linked Data course at WUR-->
+# Welcome, this is an practical example for Linked Data course at WUR
+# Week -1
 
 @prefix bc:<https://bc-wur.github.io/Walter_White_example.n3#> .
 @prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#> .
