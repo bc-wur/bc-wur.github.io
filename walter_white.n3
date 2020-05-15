@@ -1,7 +1,8 @@
-# Welcome, this is a practical example for Linked Data course at WUR
-# Week -1
+# Linked Data, WUR, 2020, Period-6
+# Week-1, Practical Class
+# Walter White, Breaking Bad example
 
-@prefix bc:<https://bc-wur.github.io/Walter_White_example.n3#> .
+@prefix bc:<https://bc-wur.github.io/walter_white.n3#> .
 @prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dbo:<https://www.example.org/#> .
