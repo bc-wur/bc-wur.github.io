@@ -8,19 +8,17 @@ This is my practical exercise for Linked Data course at WUR, enjoy...
 
 <!-- Week-1, Practical -->
 
-<note>
-
 <rdf:RDF
 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 xmlns:schema="http://schema.org/">
 
-@prefix bc: <https://www.bc-wur.github.io/Walter_White_example#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix dbo: <https://www.example.org/#> .
-@prefix dbp: <https://www.example.org/#> .
-@prefix dbpp: <https://www.example.org/#> .
-@prefix ex: <https://www.example.org/#> .
+@prefix bc:<https://www.bc-wur.github.io/Walter_White_example#> .
+@prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dbo:<https://www.example.org/#> .
+@prefix dbp:<https://www.example.org/#> .
+@prefix dbpp:<https://www.example.org/#> .
+@prefix ex:<https://www.example.org/#> .
 
 bc:Walter_White_(Breaking_Bad) dbo:series dbp:Breaking_Bad ;
                                dbo:spouse dbp:Skyler_White ;
@@ -38,6 +36,4 @@ _:1 ex:affiliationPlace ex:Winnebago ;
 _:2 ex:affiliationPlace ex:J._P._Wynne_High_School ;
     rdf:type ex:Teacher .
 
-</rdf:RDF>
-
-</note>  
+</rdf:RDF>  
