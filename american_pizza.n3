@@ -17,4 +17,4 @@ bc:American bc:hasCountryOfOrigin bc:America ;
             rdfs:label "Americana"@pt ;
             skos:prefLabel "American"@en ;
             rdfs:subClassOf bc:NamedPizza ;
-            rdf:type rdfs:Class ;
+            rdf:type rdfs:Class .
