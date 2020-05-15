@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Walter_White</title>
+  </head>
+    
+  <body>
+
+    <pre style="word-wrap: break-word; white-space: pre-wrap;">
+
+    @prefix bc:<https://bc-wur.github.io/Walter_White_example.html#> .
+    @prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix dbo:<https://www.example.org/#> .
+    @prefix dbp:<https://www.example.org/#> .
+    @prefix dbpp:<https://www.example.org/#> .
+    @prefix ex:<https://www.example.org/#> .
+
+    bc:Walter_White_(Breaking_Bad) dbo:series dbp:Breaking_Bad ;
+                                   dbo:spouse dbp:Skyler_White ;
+                                   dbo:alias "Heisenberg"@en ;
+                                   dbpp:portrayer dbp:Brain_Cranston ;
+                                   rdfs:label "Walter White"@en ;
+                                   ex:affiliation _:1 ;
+                                   ex:affiliation _:2 .
+
+    dbp:Skyler_White dbpp:portrayer dbp:Anna_Gunn .
+
+    _:1 ex:affiliationPlace ex:Winnebago ;
+        rdf:type ex:DrugDealer .
+
+    _:2 ex:affiliationPlace ex:J._P._Wynne_High_School ;
+        rdf:type ex:Teacher .
+
+    </pre>
+
+  </body>
+</html>
+  
