@@ -33,3 +33,11 @@ bc:PeperoniSausageTopping rdfs:SubClassOf bc:MeatTopping ;
                           rdfs:label "CoberturaDeCalabreza"@pt ;
                           bc:hasSpiciness bc:Medium ;
                           rdfs:label "PeperoniSausageTopping"@en .
+                          
+bc:TomatoTopping rdfs:SubClassOf bc:VegetableTopping ;
+                 bc:hasSpiciness bc:Mild ;
+                 rdf:type rdfs:Class ;
+                 rdfs:label "CoberturaDeTomate"@pt ,
+                            "TomatoTopping"@en ;
+                 skos:prefLabel "Tomato"@en ;
+
