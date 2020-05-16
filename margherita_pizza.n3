@@ -1,12 +1,18 @@
-Margherita skos:altLabel "Margherita Pizza"@en
-Margherita SubClassOf hasTopping some TomatoTopping
-Margherita rdfs:label "Margherita"@pt
-Margherita rdfs:label "Margherita"@en
-Class: Margherita
- DisjointClasses: American, AmericanHot, Cajun, Capricciosa, Caprina, Fiorentina, FourSeasons, FruttiDiMare, Giardiniera, LaReine, Margherita, Mushroom, Napoletana, Parmense, PolloAdAstra, PrinceCarlo, QuattroFormaggi, Rosa, Siciliana, SloppyGiuseppe, Soho, UnclosedPizza, Veneziana
-Margherita SubClassOf NamedPizza
-Margherita skos:prefLabel "Margherita"@en
-Margherita SubClassOf hasTopping some MozzarellaTopping
-Margherita skos:altLabel "Margherita"@en
-Margherita SubClassOf hasTopping only 
-(MozzarellaTopping or TomatoTopping)
+# Linked Data, WUR, 2020, Period-6
+# Week-1, Practical Class
+# Margherita Pizza example
+# Some @prefix statements are ignored
+
+@prefix bc: <https://bc-wur.github.io/american_pizza.n3#> .
+@prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+bc:Margherita skos:altLabel "Margherita Pizza"@en ,
+                            "Margherita"@en ;
+              skos:prefLabel "Margherita"@en ;
+              bc:hasTopping bc:TomatoTopping ,
+                            bc:MozzarellaTopping ;
+              rdfs:label "Margherita"@pt ,
+                         "Margherita"@en ,
+              rdfs:SubClassOf bc:NamedPizza ;
+              rdf:type rdfs:Class .
