@@ -1,0 +1,220 @@
+Prefix(:=<http://www.semanticweb.org/macb00k4ir/ontologies/2020/4/games#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/macb00k4ir/ontologies/2020/4/games>
+
+Declaration(Class(<http://www.co-ode.org/ontologies/pizza/pizza.owl#ValuePartition>))
+Declaration(Class(:Chess))
+Declaration(Class(:DifficultyValuePartition))
+Declaration(Class(:Easy))
+Declaration(Class(:EasyGame))
+Declaration(Class(:Game))
+Declaration(Class(:Genre))
+Declaration(Class(:Hard))
+Declaration(Class(:HardGame))
+Declaration(Class(:LeagueOfLegends))
+Declaration(Class(:Linux))
+Declaration(Class(:LinuxGame))
+Declaration(Class(:MacOSX))
+Declaration(Class(:MacOSXGame))
+Declaration(Class(:MultiPlatform))
+Declaration(Class(:MultiPlayer))
+Declaration(Class(:MultiPlayerGame))
+Declaration(Class(:NamedGame))
+Declaration(Class(:Normal))
+Declaration(Class(:NormalGame))
+Declaration(Class(:Online))
+Declaration(Class(:OnlineGame))
+Declaration(Class(:Platform))
+Declaration(Class(:Puzzle))
+Declaration(Class(:PuzzleGame))
+Declaration(Class(:RolePlayGame))
+Declaration(Class(:RolePlayerGame))
+Declaration(Class(:SinglePlayer))
+Declaration(Class(:SinglePlayerGame))
+Declaration(Class(:Sudoku))
+Declaration(Class(:Windows))
+Declaration(Class(:WindowsGame))
+Declaration(Class(:WorldOfWarcraft))
+Declaration(ObjectProperty(:hasDifficulty))
+Declaration(ObjectProperty(:hasGenre))
+Declaration(ObjectProperty(:hasPlatform))
+############################
+#   Object Properties
+############################
+
+# Object Property: :hasDifficulty (:hasDifficulty)
+
+SubObjectPropertyOf(:hasDifficulty owl:topObjectProperty)
+FunctionalObjectProperty(:hasDifficulty)
+ObjectPropertyDomain(:hasDifficulty :Game)
+ObjectPropertyRange(:hasDifficulty :DifficultyValuePartition)
+
+# Object Property: :hasGenre (:hasGenre)
+
+SubObjectPropertyOf(:hasGenre owl:topObjectProperty)
+ObjectPropertyDomain(:hasGenre :Game)
+ObjectPropertyRange(:hasGenre :Genre)
+
+# Object Property: :hasPlatform (:hasPlatform)
+
+SubObjectPropertyOf(:hasPlatform owl:topObjectProperty)
+ObjectPropertyDomain(:hasPlatform :Game)
+ObjectPropertyRange(:hasPlatform :Platform)
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.co-ode.org/ontologies/pizza/pizza.owl#ValuePartition> (ValuePartition)
+
+
+# Class: :Chess (:Chess)
+
+SubClassOf(:Chess :NamedGame)
+SubClassOf(:Chess ObjectUnionOf(:Linux :Windows ObjectSomeValuesFrom(:hasPlatform :MacOSX)))
+SubClassOf(:Chess ObjectUnionOf(:MultiPlayer ObjectSomeValuesFrom(:hasGenre :SinglePlayer)))
+SubClassOf(:Chess ObjectAllValuesFrom(:hasDifficulty :Normal))
+
+# Class: :DifficultyValuePartition (:DifficultyValuePartition)
+
+EquivalentClasses(:DifficultyValuePartition ObjectUnionOf(:Easy :Hard :Normal))
+SubClassOf(:DifficultyValuePartition <http://www.co-ode.org/ontologies/pizza/pizza.owl#ValuePartition>)
+
+# Class: :Easy (:Easy)
+
+SubClassOf(:Easy :DifficultyValuePartition)
+
+# Class: :EasyGame (:EasyGame)
+
+EquivalentClasses(:EasyGame ObjectIntersectionOf(:Game ObjectAllValuesFrom(:hasDifficulty :Easy)))
+
+# Class: :Game (:Game)
+
+
+# Class: :Genre (:Genre)
+
+
+# Class: :Hard (:Hard)
+
+SubClassOf(:Hard :DifficultyValuePartition)
+
+# Class: :HardGame (:HardGame)
+
+EquivalentClasses(:HardGame ObjectIntersectionOf(:Game ObjectAllValuesFrom(:hasDifficulty :Hard)))
+
+# Class: :LeagueOfLegends (:LeagueOfLegends)
+
+SubClassOf(:LeagueOfLegends :MultiPlayerGame)
+SubClassOf(:LeagueOfLegends :NamedGame)
+SubClassOf(:LeagueOfLegends :OnlineGame)
+SubClassOf(:LeagueOfLegends ObjectUnionOf(:Windows ObjectSomeValuesFrom(:hasPlatform :MacOSX)))
+SubClassOf(:LeagueOfLegends ObjectSomeValuesFrom(:hasDifficulty :Hard))
+
+# Class: :Linux (:Linux)
+
+SubClassOf(:Linux :Platform)
+
+# Class: :LinuxGame (:LinuxGame)
+
+EquivalentClasses(:LinuxGame ObjectIntersectionOf(:Game ObjectAllValuesFrom(:hasPlatform :Linux)))
+
+# Class: :MacOSX (:MacOSX)
+
+SubClassOf(:MacOSX :Platform)
+
+# Class: :MacOSXGame (:MacOSXGame)
+
+EquivalentClasses(:MacOSXGame ObjectIntersectionOf(:Game ObjectAllValuesFrom(:hasPlatform :MacOSX)))
+
+# Class: :MultiPlatform (:MultiPlatform)
+
+EquivalentClasses(:MultiPlatform ObjectIntersectionOf(:Platform ObjectUnionOf(:Linux :Windows ObjectSomeValuesFrom(:hasPlatform :MacOSX))))
+
+# Class: :MultiPlayer (:MultiPlayer)
+
+SubClassOf(:MultiPlayer :Genre)
+
+# Class: :MultiPlayerGame (:MultiPlayerGame)
+
+EquivalentClasses(:MultiPlayerGame ObjectIntersectionOf(:Game ObjectSomeValuesFrom(:hasGenre :MultiPlayer)))
+
+# Class: :NamedGame (:NamedGame)
+
+SubClassOf(:NamedGame :Game)
+
+# Class: :Normal (:Normal)
+
+SubClassOf(:Normal :DifficultyValuePartition)
+
+# Class: :NormalGame (:NormalGame)
+
+EquivalentClasses(:NormalGame ObjectIntersectionOf(:Game ObjectAllValuesFrom(:hasDifficulty :Normal)))
+
+# Class: :Online (:Online)
+
+SubClassOf(:Online :Genre)
+
+# Class: :OnlineGame (:OnlineGame)
+
+EquivalentClasses(:OnlineGame ObjectIntersectionOf(:Game ObjectSomeValuesFrom(:hasGenre :Online)))
+
+# Class: :Platform (:Platform)
+
+
+# Class: :Puzzle (:Puzzle)
+
+SubClassOf(:Puzzle :NamedGame)
+
+# Class: :PuzzleGame (:PuzzleGame)
+
+EquivalentClasses(:PuzzleGame ObjectIntersectionOf(:Game ObjectUnionOf(:SinglePlayer ObjectSomeValuesFrom(:hasGenre :MultiPlayer)) ObjectSomeValuesFrom(:hasDifficulty :Hard)))
+
+# Class: :RolePlayGame (:RolePlayGame)
+
+SubClassOf(:RolePlayGame :Genre)
+
+# Class: :RolePlayerGame (:RolePlayerGame)
+
+EquivalentClasses(:RolePlayerGame ObjectIntersectionOf(:Game ObjectSomeValuesFrom(:hasGenre :RolePlayGame)))
+
+# Class: :SinglePlayer (:SinglePlayer)
+
+SubClassOf(:SinglePlayer :Genre)
+
+# Class: :SinglePlayerGame (:SinglePlayerGame)
+
+EquivalentClasses(:SinglePlayerGame ObjectIntersectionOf(:Game ObjectSomeValuesFrom(:hasGenre :SinglePlayer)))
+SubClassOf(:SinglePlayerGame :Game)
+
+# Class: :Sudoku (:Sudoku)
+
+SubClassOf(:Sudoku :NamedGame)
+SubClassOf(:Sudoku :SinglePlayerGame)
+
+# Class: :Windows (:Windows)
+
+SubClassOf(:Windows :Platform)
+
+# Class: :WindowsGame (:WindowsGame)
+
+EquivalentClasses(:WindowsGame ObjectIntersectionOf(:Game ObjectAllValuesFrom(:hasPlatform :Windows)))
+
+# Class: :WorldOfWarcraft (:WorldOfWarcraft)
+
+SubClassOf(:WorldOfWarcraft :MultiPlayerGame)
+SubClassOf(:WorldOfWarcraft :NamedGame)
+SubClassOf(:WorldOfWarcraft :OnlineGame)
+
+
+DisjointClasses(<http://www.co-ode.org/ontologies/pizza/pizza.owl#ValuePartition> :Game :Genre :Platform)
+DisjointClasses(:Easy :Hard :Normal)
+DisjointClasses(:Linux :MacOSX :Windows)
+DisjointClasses(:MultiPlayer :Online :RolePlayGame :SinglePlayer)
+)
