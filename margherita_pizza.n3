@@ -13,6 +13,6 @@ bc:Margherita skos:altLabel "Margherita Pizza"@en ,
               bc:hasTopping bc:TomatoTopping ,
                             bc:MozzarellaTopping ;
               rdfs:label "Margherita"@pt ,
-                         "Margherita"@en ,
+                         "Margherita"@en ;
               rdfs:SubClassOf bc:NamedPizza ;
               rdf:type rdfs:Class .
