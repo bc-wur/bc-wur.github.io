@@ -18,3 +18,18 @@ bc:American bc:hasCountryOfOrigin bc:America ;
             skos:prefLabel "American"@en ;
             rdfs:subClassOf bc:NamedPizza ;
             rdf:type rdfs:Class .
+
+bc:MozzarellaTopping rdfs:SubClassOf bc:CheeseTopping ;
+                  `  skos:prefLabel "Mozzarella"@en
+                     rdfs:label "CoberturaDeMozzarella"@pt ,
+                                "MozzarellaTopping"@en ;
+                     rdf:type rdfs:Class ;
+                     bc:hasCountryOfOrigin bc:Italy ;
+                     bc:hasSpiciness bc:Mild .
+                     
+bc:PeperoniSausageTopping rdfs:SubClassOf bc:MeatTopping ;
+                          skos:prefLabel "Peperoni Sausage"@en ;
+                          rdf:type rdfs:Class ;
+                          rdfs:label "CoberturaDeCalabreza"@pt ;
+                          bc:hasSpiciness bc:Medium ;
+                          rdfs:label "PeperoniSausageTopping"@en .
