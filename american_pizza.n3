@@ -13,8 +13,8 @@ bc:American bc:hasCountryOfOrigin bc:America ;
                           bc:PeperoniSausageTopping ,
                           bc:TomatoTopping ;
             skos:altLabel "American Pizza"@en ;
-            rdfs:label "American"@en ;
-            rdfs:label "Americana"@pt ;
+            rdfs:label "American"@en ,
+                       "Americana"@pt ;
             skos:prefLabel "American"@en ;
             rdfs:subClassOf bc:NamedPizza ;
             rdf:type rdfs:Class .
