@@ -1,0 +1,12 @@
+Margherita skos:altLabel "Margherita Pizza"@en
+Margherita SubClassOf hasTopping some TomatoTopping
+Margherita rdfs:label "Margherita"@pt
+Margherita rdfs:label "Margherita"@en
+Class: Margherita
+ DisjointClasses: American, AmericanHot, Cajun, Capricciosa, Caprina, Fiorentina, FourSeasons, FruttiDiMare, Giardiniera, LaReine, Margherita, Mushroom, Napoletana, Parmense, PolloAdAstra, PrinceCarlo, QuattroFormaggi, Rosa, Siciliana, SloppyGiuseppe, Soho, UnclosedPizza, Veneziana
+Margherita SubClassOf NamedPizza
+Margherita skos:prefLabel "Margherita"@en
+Margherita SubClassOf hasTopping some MozzarellaTopping
+Margherita skos:altLabel "Margherita"@en
+Margherita SubClassOf hasTopping only 
+(MozzarellaTopping or TomatoTopping)
